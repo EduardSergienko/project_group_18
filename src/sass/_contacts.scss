@@ -1,10 +1,35 @@
+// Приховання заголовків секцій
+.visually-hidden {
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+}
+
 .contacts-section {
-  color: rgba(144, 126, 130, 1);
-  background-image: linear-gradient(to bottom, #ffffff 15%, #fff5f6 15%);
+  // color: var(--complementary-text-color);
+  background-image: linear-gradient(
+    to bottom,
+    var(--second-complementary-text-color) 6%,
+    #fff5f6 7%
+  );
+}
+
+.contacts {
+  @media screen and (max-width: 767px) {
+    // чи задати фіксовану ширину .contacts-item?
+    padding: 0 30px;
+    margin-bottom: 54px;
+  }
 }
 
 .contacts-item {
   padding: 43px 20px;
+
+  background-color: var(--second-complementary-text-color);
+  box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
+  border-radius: 24px;
 
   @media screen and (min-width: 768px) {
     padding: 50px 31px;
@@ -22,19 +47,44 @@
 }
 
 .contacts-label {
+  position: relative;
+
+  width: 80px;
+  height: 16px;
+  margin-bottom: 25px;
+
+  text-align: center;
+
   background-color: #f0d1a5;
   border-radius: 4px;
 
   @media screen and (min-width: 768px) {
+    width: 73px;
+    height: 28px;
+
     border-radius: 6px;
   }
 }
+
 .contacts-label--background {
+  width: 130px;
+
+  @media screen and (min-width: 768px) {
+    width: 138px;
+
+    border-radius: 6px;
+  }
+
   background-color: #c2e297;
 }
+
 .contacts-label__name {
-  font-family: DM Sans;
-  font-style: normal;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+
   font-weight: 500;
   font-size: 12px;
   line-height: 186%;
@@ -50,4 +100,133 @@
     line-height: 186%;
     /* or 30px */
   }
+}
+.contacts-subitem:not(:last-child)::after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+  margin-top: 25px;
+  margin-bottom: 25px;
+
+  border-bottom: 1px solid #e1e1e1;
+
+  @media screen and (min-width: 768px) {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+}
+
+.contacts-name {
+  margin-bottom: 10px;
+
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  /* or 22px */
+  letter-spacing: 0.04em;
+
+  color: inherit;
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 14px;
+
+    font-size: 14px;
+    line-height: 186%;
+    /* or 26px */
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 10px;
+
+    font-size: 16px;
+    line-height: 186%;
+    /* or 30px */
+    letter-spacing: 0.04em;
+  }
+}
+
+.contacts-desc {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+
+  color: var(--complementary-text-color);
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 166%;
+    /* or 23px */
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 183%;
+    /* or 29px */
+    letter-spacing: 0.04em;
+  }
+}
+
+.contacts-period:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.contacts-period__days {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  /* or 22px */
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 186%;
+    /* or 26px */
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 186%;
+    /* or 30px */
+    letter-spacing: 0.04em;
+  }
+}
+
+.contacts-period__hours {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  /* identical to box height, or 22px */
+
+  color: #ffa5ba;
+
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 186%;
+    /* or 26px */
+  }
+
+  @media screen and (min-width: 1200px) {
+    font-size: 16px;
+    line-height: 186%;
+    /* or 30px */
+  }
+}
+.contacts-link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 18px;
+  /* or 150% */
+
+  color: var(--complementary-text-color);
+}
+.button {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
