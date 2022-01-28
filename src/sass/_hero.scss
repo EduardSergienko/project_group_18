@@ -38,25 +38,6 @@
   }
 }
 
-.button {
-  display: block;
-  padding: 7px 13px;
-  border-radius: 20px;
-
-  font-size: 8px;
-  line-height: 1.25;
-
-  &--dark {
-    color: #ffffff;
-    background-color: #d41443;
-  }
-
-  &--light {
-    color: #d41443;
-    background-color: #ffffff;
-  }
-}
-
 .hero__list {
   @media screen and (max-width: 767px) {
     display: none;
