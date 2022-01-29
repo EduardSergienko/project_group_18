@@ -1,30 +1,100 @@
 <section class="hero">
-    <div class="container">
-        <h1 class="hero__tittle">
-            <span class="hero__tittle--acsent">ice cream made with</span>
-            passion
-        </h1>
+    <div class="container hero_container">
+        <div class="hero_title-box">
+            <h1 class="hero__tittle">
+                <span class="hero__tittle--acsent">ice cream <br> made with</span>
+                passion
+            </h1>
+
+            <ul class="buttons">
+                <li class="buttons__item"><a class="button button--dark" href="#products">Products</a></li>
+                <li class="buttons__item"><a class="button button--light" href="#about">How it’s made?</a></li>
+            </ul>
+
+        </div>
+
         <ul class="hero__list">
             <li class="hero__item">
                 <p class="hero__number">16</p>
                 <p class="hero__label">cafes</p>
             </li>
+
             <li class="hero__item">
                 <p class="hero__number">23</p>
                 <p class="hero__label">food trucks</p>
             </li>
         </ul>
-        <ul class="hero__buttons">
-            <li class="hero__button"><a class="hero__link" href="#products">Products</a></li>
-            <li class="hero__button"><a class="hero__link" href="#about">How it’s made?</a></li>
-        </ul>
             
         <div class="hero_massege">
             <p class="hero__text"></p>
-            <button class="button--arrow"></button>
+            <button class="button--arrow"><img src="./images/arrow.png" alt=""></button>
         </div>
-        <img src="./images/desktop/big_ice_cream.png" alt="" class="hero__img">
-        <img src="./images/desktop/milc_in_decanter.png" alt="" class="hero__img">
-        <img src="./images/desktop/tasty.png" alt="" class="hero__img">
+        
+        <picture>
+            
+            <source srcset="./images/tablet/milk_in_decanter.png 1x, ./images/tablet/milk_in_decanter@2x.png 2x" type="image/jpeg"
+                media="(min-width: 768px) and (max-width: 1279px)" />
+           <source srcset="./images/desktop/milk_in_decanter.png 1x, ./images/desktop/milk_in_decanter@2x.png 2x" type="image/jpeg"
+                media="(min-width: 1280px)"> 
+            <img class="hero__img hero__img--left" src="./images/desktop/milk_in_decanter.png"  alt="Milk in a jug with splashes as a background of bio eco" />
+        </picture>
+
+        
+
+        <picture>
+            <source srcset="./images/mobile/big_ice_cream.png 1x, ./images/mobile/big_ice_cream@2x.png 2x" type="image/jpeg"
+                media="(max-width: 767px)" >
+            <source srcset="./images/tablet/big_ice_cream.png 1x, ./images/tablet/big_ice_cream@2x.png 2x" type="image/jpeg"
+                media="(min-width: 768px) and (max-width: 1279px)" />
+            <source srcset="./images/desktop/big_ice_cream.png 1x, ./images/desktop/big_ice_cream@2x.png 2x" type="image/jpeg"
+                media="(min-width: 1280px)" >
+            <img class="hero__img hero__img--center" src="./images/desktop/big_ice_cream.png" alt="A big colorful ice cream cone" />
+        </picture>
+
+       
+
+        <picture>
+            
+            <source srcset="./images/tablet/tasty.png 1x, ./images/tablet/tasty@2x.png 2x" type="image/jpeg"
+                media="(min-width: 768px) and (max-width: 1279px)" />
+            <source srcset="./images/desktop/tasty.png 1x, ./images/desktop/tasty@2x.png 2x" type="image/jpeg"
+                media="(min-width: 1280px)">
+            <img  class="hero__img hero__img--right" src="./images/desktop/tasty.png" alt="A girl wearing a swimsuit tasting ice cream" />
+        </picture>
+
+        
+        <div class="hero__circle"></div> 
     </div>
 </section>
+
+<script>
+    (() => {
+            const mobileMenu = document.querySelector('.js-menu-container');
+            const openMenuBtn = document.querySelector('.js-open-menu');
+            const closeMenuBtn = document.querySelector('.js-close-menu');
+
+            const toggleMenu = () => {
+                const isMenuOpen =
+                    openMenuBtn.getAttribute('aria-expanded') === 'true' || false;
+                openMenuBtn.setAttribute('aria-expanded', !isMenuOpen);
+                mobileMenu.classList.toggle('is-open');
+
+                const scrollLockMethod = !isMenuOpen
+                    ? 'disableBodyScroll'
+                    : 'enableBodyScroll';
+                bodyScrollLock[scrollLockMethod](document.body);
+            };
+
+            openMenuBtn.addEventListener('click', toggleMenu);
+            closeMenuBtn.addEventListener('click', toggleMenu);
+
+            // Закрываем мобильное меню на более широких экранах
+            // в случае изменения ориентации устройства.
+            window.matchMedia('(min-width: 768px)').addEventListener('change', e => {
+                if (!e.matches) return;
+                mobileMenu.classList.remove('is-open');
+                openMenuBtn.setAttribute('aria-expanded', false);
+                bodyScrollLock.enableBodyScroll(document.body);
+            });
+        })();
+</script>
