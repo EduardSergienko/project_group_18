@@ -3,11 +3,22 @@
   top: 0;
   width: 100%;
   z-index: 10;
-  background-color: #ffb8ca;
+
+  @media screen and (max-width: 767px) {
+    background-color: rgba(255, 184, 202, 0.6);
+  }
+
+  @media screen and (min-width: 768px) {
+    position: absolute;
+  }
 }
 .header__conteiner {
   padding-top: 6px;
   padding-bottom: 6px;
+
+  @media screen and (min-width: 768px) {
+    padding-top: 37px;
+  }
 }
 
 .logo {
@@ -18,7 +29,7 @@
 .navigation {
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  // justify-content: space-between;
   align-items: center;
 }
 
@@ -44,25 +55,35 @@
 // }
 
 .menu {
-  position: absolute;
-  left: 101vw;
-  top: 0;
-  transform: translate(-100%);
-  width: 250px;
-  height: 100vh;
-  padding-left: 20px;
-  padding-right: 20px;
-  background-color: #e17992;
+  @media screen and (max-width: 1279px) {
+    position: absolute;
+    right: 0;
+    top: 0;
+    // transform: translate(-2000px);
+    width: 250px;
+    height: 100vh;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #e17992;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    width: 33vw;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .button {
   display: block;
   padding: 7px 13px;
   border: none;
-  border-radius: 20px;
+  border-radius: 12px;
 
   font-size: 8px;
   line-height: 1.25;
+
+  cursor: pointer;
 
   &--dark {
     color: #ffffff;
@@ -86,17 +107,31 @@
 }
 
 .button__header {
-  @media screen and (max-width: 767px) {
-    display: none;
+  padding: 14px 37px;
+  border-radius: 22px;
+  font-weight: 700;
+  font-size: 16px;
+
+  &--with-out-menu {
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      margin-left: 20px;
+    }
+  }
+
+  &--menu {
+    width: 100%;
   }
 }
 
-.button__menu {
-  width: 100%;
-  font-size: 16px;
+.bt-arrow {
+  font-size: 24;
 }
 
-.switch {
+.btn-reset {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -107,7 +142,9 @@
   background-color: transparent;
 
   cursor: pointer;
+}
 
+.switch {
   width: 40px;
   height: 40px;
 }
@@ -118,6 +155,8 @@
 }
 
 .switch__burger {
+  margin-left: auto;
+
   fill: #d41443;
   &:hover,
   &:focus {
