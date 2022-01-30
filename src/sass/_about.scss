@@ -1,11 +1,14 @@
 .about__section {
   padding-top: 98px;
+  padding-bottom: 39px;
 
   @media screen and (min-width: 768px) {
     padding-top: 112px;
+    padding-bottom: 66px;
   }
   @media screen and (min-width: 1280px) {
     padding-top: 119px;
+    padding-bottom: 39px;
   }
   background-color: #fff5f6;
 }
@@ -186,7 +189,7 @@
   font-weight: bold;
   font-size: 14px;
   line-height: calc(18 / 14);
-  color: #d41443;
+  color: var(--activity-text-color);
 
   @media screen and (min-width: 768px) {
     font-size: 16px;
@@ -200,4 +203,9 @@
   &:focus {
     background-color: #ecebeb;
   }
+}
+.about__button-icon {
+  fill: var(--activity-text-color);
+  margin-left: 13px;
+  // vertical-align: middle;
 }
