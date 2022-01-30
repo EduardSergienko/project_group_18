@@ -1,0 +1,7 @@
+@mixin grid($value, $margin: 10px) {
+  flex-basis: calc(100% / #{$value} - #{$margin} * 2);
+  margin: $margin;
+}
+@mixin Animation($properties...) {
+  transition: 250ms $timing-function;
+}
