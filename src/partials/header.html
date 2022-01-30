@@ -3,24 +3,20 @@
         <nav class="navigation">
             <a href="./index.html" class="logo">
                 <img class="logo__icon" src="./images/icon-logo.png" alt="Іtylized ice cream" width="50px">
-                <p class="logo__text">isecream</p>
+                <p class="logo__text">icecream</p>
             </a>
-
-            <button type="button" class="switch switch__burger js-open-menu" aria-expanded="false" >
-                <svg class="switch__box"  aria-label="Переключатель мобильного меню">
-                    <use class="icon-burger" href="./images/icons.svg#icon-menu"   ></use>
-                </svg>
-            </button>
-            <button class="button button__header button--light">Buy now</button>
 
             <div class="menu__conteiner">
                 <div class="menu">
-                    <button type="button" class="switch switch__close js-close-menu" aria-expanded="false" aria-controls="menu-container">
-                        <svg class="switch__box"  aria-label="Переключатель мобильного меню">
+                    <button type="button" class="btn-reset switch switch__close js-close-menu" aria-expanded="false"
+                        aria-controls="menu-container">
+                        <svg class="switch__box" aria-label="Переключатель мобильного меню">
                             <use class="icon-close" href="./images/icons.svg#icon-close"></use>
                         </svg>
                     </button>
-                    <button class="button button__menu button--light">Buy now</button>
+                    
+                    <button class="button button__header button__header--menu button--light">&nbsp;Buy now
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8250;</button>
                     <ul class="navigation__tabs">
                         <li class="navigation__tab"><a href="#header" class="nav-link">Home</a></li>
                         <li class="navigation__tab"><a href="#advantages" class="nav-link">About us</a></li>
@@ -28,10 +24,19 @@
                         <li class="navigation__tab"><a href="#products" class="nav-link">Our products</a></li>
                         <li class="navigation__tab"><a href="#contact" class="nav-link">Contact</a></li>
                     </ul>
-                    
+            
                 </div>
-                
+            
             </div>
+
+            <button type="button" class="btn-reset switch switch__burger js-open-menu" aria-expanded="false" >
+                <svg class="switch__box"  aria-label="Переключатель мобильного меню">
+                    <use class="icon-burger" href="./images/icons.svg#icon-menu"   ></use>
+                </svg>
+            </button>
+            <button class="button button__header button__header--with-out-menu button--light">&nbsp;Buy now &nbsp;&nbsp;<span class="bt-arrow">&#8250;</span></button>
+
+            
         </nav>
     </div>
 </header>
