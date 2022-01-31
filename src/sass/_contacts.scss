@@ -259,6 +259,8 @@
 
   color: var(--complementary-text-color);
 
+  @include Animation(color);
+
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 183%;
@@ -269,6 +271,11 @@
     font-size: 16px;
     line-height: 183%;
     /* or 29px */
+  }
+
+  &:hover,
+  &:focus {
+    color: var(--main-text-color);
   }
 }
 
@@ -388,6 +395,23 @@
     margin-left: 13px;
 
     fill: var(--activity-text-color);
+  }
+
+  .contacts-button:hover &,
+  .contacts-button:focus & {
+    animation: bounceright 0.4s alternate cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@keyframes bounceright {
+  0% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 
@@ -567,8 +591,6 @@
   letter-spacing: 0.03em;
   text-align: center;
 
-  color: var(--main-text-color);
-
   @media screen and (min-width: 1280px) {
     line-height: 1.5em;
   }
@@ -587,12 +609,12 @@
   letter-spacing: 0.01em;
 }
 
-.form__comment {
-  display: block;
-  margin-bottom: 20px;
-}
 .form__textarea {
+  display: block;
   height: 120px;
+  padding: 12px 16px;
+
+  font-size: 14px;
 
   resize: none;
 
@@ -603,13 +625,6 @@
 
     color: rgba(117, 117, 117, 0.5);
   }
-}
-
-.form__textarea {
-  display: block;
-  padding: 12px 16px;
-
-  font-size: 14px;
 }
 
 .form-control {
@@ -625,6 +640,10 @@
     outline-color: var(--activity-text-color);
     border: 1px solid var(--activity-text-color);
   }
+}
+
+.form-label {
+  margin-bottom: 4px;
 }
 
 .form__icon-box {
@@ -674,5 +693,4 @@
 .form__button {
   margin-right: auto;
   margin-left: auto;
-  padding: 10px 55px;
 }
