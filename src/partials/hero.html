@@ -1,4 +1,4 @@
-<section class="hero">
+<section class="hero" id="hero">
     <div class="container hero_container">
         <div class="hero__main">
             <div class="hero_title-box">
@@ -8,8 +8,8 @@
                 </h1>
             
                 <ul class="buttons">
-                    <li class="buttons__item"><a class="button button--dark" href="#products">Products</a></li>
-                    <li class="buttons__item"><a class="button button--light" href="#about">How it’s made?</a></li>
+                    <li class="buttons__item"><a class="button hero_button button--dark" href="#products">Products</a></li>
+                    <li class="buttons__item"><a class="button hero_button button--light" href="#about">How it’s made?</a></li>
                 </ul>
             
             </div>
@@ -29,7 +29,18 @@
             
         <div class="hero_massege">
             <p class="hero__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et</p>
-            <button class="btn-reset arrow"><img src="./images/arrow.png" alt=""></button>
+            
+            <input type="checkbox" id="read-more" hidden>
+            <p class="extra-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.                 
+            </p>
+
+            <label for="read-more" class="read-more">
+                <span class="more btn-reset hero__arrow hero__arrow--more "><img src="./images/arrow.png" alt=""></span>
+                <span class="less btn-reset hero__arrow hero__arrow--less "><img src="./images/arrow.png" alt=""></span>
+
+            </label>
+
         </div>
         
         <picture>
@@ -96,3 +107,6 @@
             });
         })();
 </script>
+
+
+
