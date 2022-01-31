@@ -44,6 +44,7 @@
     background: #ffb8ca;
   }
   &__ice-cream::before {
+
     position: absolute;
     left: 50%;
     top: 3%;
@@ -53,6 +54,7 @@
     background: #f0d1a5;
   }
   &__ice-coffee::before {
+
     position: absolute;
     left: 50%;
     top: 3%;
@@ -62,6 +64,7 @@
     background: #c2e297;
   }
   &__milkshakes::before {
+
     position: absolute;
     left: 50%;
     top: 3%;
@@ -84,12 +87,17 @@
   }
 
   &__item-text {
+
     font-family: DM Sans;
     font-style: normal;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.5;
+
     margin-bottom: 40px;
+
+   
+
     text-align: center;
     letter-spacing: 0.04em;
 
@@ -120,7 +128,9 @@
   .products__list li {
     max-width: 280px;
 
+
     padding-top: 160px;
+
     border-radius: 24px;
     padding-left: 40px;
     padding-right: 40px;
