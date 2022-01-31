@@ -163,6 +163,7 @@
 
   &--dark {
     color: #ffffff;
+
     background-color: #d41443;
 
     &:hover,
@@ -173,6 +174,7 @@
 
   &--light {
     color: #d41443;
+    fill: #d41443;
     background-color: #ffffff;
 
     &:hover,
@@ -180,6 +182,13 @@
       background: #ecebeb;
     }
   }
+}
+
+.header__button-icon {
+  margin-left: 8px;
+
+  vertical-align: middle;
+  fill: var(--activity-text-color);
 }
 
 .button__header {
