@@ -58,6 +58,8 @@
   @include Animation(transform);
 
   @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
     padding: 50px 31px;
     @include grid(3);
   }
@@ -133,7 +135,11 @@
   }
 }
 
-.contacts-subitem:not(:last-child)::after {
+.contacts-subitem--grow {
+  flex-grow: 1;
+}
+
+.contacts-subitem--before::before {
   content: '';
   display: inline-block;
   width: 100%;
