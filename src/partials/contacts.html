@@ -1,4 +1,4 @@
-<section class="section contacts-section">
+<section class="section contacts-section" id="contacts">
   <div class="container">
     <h2 class="section__title visually-hidden">Contacts</h2>
     <ul class="contacts">
@@ -140,42 +140,46 @@
       <p class="modal__title">Become a partner!</p>
       <form class="form">
         <label class="form__comment">
-          <textarea name="comment" placeholder="Введите текст" class="form__textarea form-control">
-I am interested in your franchise! Please send me a business plan and detailed information about the franchise.</textarea
+          <textarea name="comment" placeholder="Enter the text" class="form__textarea form-control">
+I am interested in your franchise! Please, send me a business plan and detailed information about the franchise.</textarea
           >
         </label>
-        <label class="form__group"
-          >Name
+        <label class="form__group">
+          <p class="form-label">Name</p>
           <span class="form__icon-box">
-            <input type="text" class="form__input form-control" name="name" />
+            <input type="text" class="form__input form-control" name="name" required />
             <svg width="18" height="18" class="form__icon">
-              <!-- <use href="./images/sprite.svg#person"></use> -->
+              <use href="./images/icons.svg#name"></use>
             </svg>
           </span>
         </label>
-        <label class="form__group"
-          >Phone number
+        <label class="form__group">
+          <p class="form-label">Phone number</p>
           <span class="form__icon-box">
-            <input type="text" class="form__input form-control" name="phone" />
+            <input type="text" class="form__input form-control" name="phone" required />
             <svg width="18" height="18" class="form__icon">
-              <!-- <use href="./images/sprite.svg#phone"></use> -->
+              <use href="./images/icons.svg#phone"></use>
             </svg>
           </span>
         </label>
-        <label class="form__group"
-          >E-mail
+        <label class="form__group">
+          <p class="form-label">E-mail</p>
           <span class="form__icon-box">
-            <input type="text" class="form__input form-control" name="mail" />
+            <input type="text" class="form__input form-control" name="mail" required />
             <svg width="18" height="18" class="form__icon">
-              <!-- <use href="./images/sprite.svg#email"></use> -->
+              <use href="./images/icons.svg#email"></use>
             </svg>
           </span>
         </label>
 
         <p class="form__text">
-          By submitting an application, you give your consent to the processing of personal data.
+          By submitting an application, you give your permission to the processing of personal data.
         </p>
-        <button type="submit" class="contacts-button form__button">Submit</button>
+        <button type="submit" class="contacts-button form__button">
+          Submit<svg class="button__icon" width="10" height="10">
+            <use href="./images/icons.svg#icon_button"></use>
+          </svg>
+        </button>
       </form>
     </div>
   </div>
