@@ -106,6 +106,13 @@
   }
 }
 
+.hero_button {
+  @media screen and (min-width: 1280px) {
+    padding: 13px 20px;
+    border-radius: 20px;
+  }
+}
+
 .hero__list {
   @media screen and (max-width: 767px) {
     display: none;
@@ -144,15 +151,22 @@
 
   &::after {
     content: '';
+
+    z-index: -1;
     position: absolute;
     top: 0;
     right: 0;
-    transform: translate(50%, 0);
+    transform: translate(50%, 3px);
 
     display: block;
     @include circle(16px);
 
     background-color: #ffffff;
+
+    @media screen and (min-width: 1280px) {
+      transform: translate(50%, -2px);
+      @include circle(32px);
+    }
   }
 
   @media screen and (min-width: 1280px) {
@@ -215,9 +229,8 @@
     }
 
     &--center {
-      top: 95px;
       left: 117px;
-
+      bottom: 0;
       width: 171px;
     }
   }
@@ -284,5 +297,25 @@
     top: 46px;
     left: 370px;
     @include circle(538px);
+  }
+
+  animation: animate_circle 3000ms 1000ms;
+
+  @keyframes animate_circle {
+    0% {
+      transform: scale(1);
+    }
+
+    20% {
+      transform: scale(0.2);
+    }
+
+    50% {
+      transform: scale(1.25);
+    }
+
+    100% {
+      transform: scale(1);
+    }
   }
 }
