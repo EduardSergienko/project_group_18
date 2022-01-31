@@ -13,13 +13,18 @@
 
   z-index: 5;
 
-  padding-top: 193px;
-  padding-bottom: 160px;
-  // overflow: hidden;
-
   font-size: 8px;
   line-height: 1.5;
   color: #ffffff;
+
+  // @media screen and (max-width: 479px) {
+  //   overflow: hidden;
+  // }
+
+  @media screen and (max-width: 767px) {
+    padding-top: 193px;
+    padding-bottom: 160px;
+  }
 
   @media screen and (min-width: 768px) {
     height: 399px;
@@ -204,17 +209,29 @@
   }
 }
 
-.arrow {
+.hero__arrow {
   width: 18px;
   height: 18px;
 
-  margin-top: 7px;
+  &--more {
+    margin-top: 7px;
+  }
+
+  &--less {
+    margin-top: 3px;
+  }
 
   @media screen and (min-width: 1280px) {
     width: 26px;
     height: 26px;
 
-    margin-top: 20px;
+    &--more {
+      margin-top: 20px;
+    }
+
+    &--less {
+      margin-top: 5px;
+    }
   }
 }
 
