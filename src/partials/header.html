@@ -98,10 +98,10 @@
           </span>
         </label>
         <label class="form-header__comment"
-          >Your comment
+          >Your comments
           <textarea
             name="comment"
-            placeholder="Введите текст"
+            placeholder="Enter your text"
             class="form-header__textarea form-header-control"
           ></textarea>
         </label>
@@ -117,12 +117,18 @@
                 <!-- <use href="./images/sprite.svg#check"></use> -->
               </svg>
             </span>
-            Соглашаюсь с рассылкой и принимаю&nbsp;<a href="#" class="form-header__link-checkbox"
-              >Условия договора</a
+            I agree to the mailing and accept &nbsp;<a href="#" class="form-header__link-checkbox"
+              >the terms of the contract</a
             ></label
           >
         </div>
-        <button type="submit" class="button form-header__button">Отправить</button>
+       
+        <button type="submit" class="button button__header form-header__button  button--dark" data-modal-header-open>
+          Send
+          <svg class="header__button-icon header__button-icon--light" width="10" height="10">
+            <use href="./images/icons.svg#icon_button"></use>
+          </svg>
+        </button>
       </form>
     </div>
   </div>

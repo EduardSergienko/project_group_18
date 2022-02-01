@@ -190,6 +190,10 @@
   vertical-align: middle;
   fill: var(--activity-text-color);
 
+  &--light {
+    fill: var(--second-complementary-text-color);
+  }
+
   .button__header:hover &,
   .button__header:focus & {
     animation: bounceright 0.4s alternate cubic-bezier(0.4, 0, 0.2, 1);
@@ -524,8 +528,8 @@
     color: var(--activity-text-color);
   }
 }
+
 .form-header__button {
   margin-right: auto;
   margin-left: auto;
-  padding: 10px 55px;
 }
