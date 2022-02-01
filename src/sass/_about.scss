@@ -210,10 +210,61 @@
 .about__button-icon {
   fill: var(--activity-text-color);
   margin-left: 13px;
+  .about__button:hover &,
+  .about__button:focus & {
+    animation: bounceright 0.4s alternate cubic-bezier(0.4, 0, 0.2, 1);
+  }
   // vertical-align: middle;
 }
 .about__img {
   @media screen and (min-width: 768px) {
     align-items: flex-start;
   }
+}
+
+.about__extra-text {
+  display: none;
+  max-width: 480px;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 162%;
+
+  color: #907e82;
+
+  margin-bottom: 47px;
+
+  @media screen and (min-width: 768px) {
+    max-width: none;
+    font-size: 14px;
+    line-height: calc(25 / 14);
+    width: 340px;
+    margin-bottom: 62px;
+    letter-spacing: 0.04em;
+  }
+
+  @media screen and (min-width: 1280px) {
+    max-width: none;
+    font-size: 14px;
+    line-height: calc(27 / 14);
+    width: 463px;
+    margin-bottom: 45px;
+
+    letter-spacing: 0.04em;
+  }
+}
+
+#read-more-1:checked ~ .about__extra-text {
+  display: block;
+}
+
+.about__less {
+  display: none;
+}
+
+#read-more-1:checked ~ .about__button .about__more {
+  display: none;
+}
+
+#read-more-1:checked ~ .about__button .about__less {
+  display: inline;
 }
