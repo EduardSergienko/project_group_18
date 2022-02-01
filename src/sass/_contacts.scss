@@ -448,7 +448,7 @@
 
 .modal {
   position: relative;
-  top: 20%;
+  top: 25%;
 
   padding: 40px;
 
@@ -481,7 +481,7 @@
   }
 
   @media screen and (min-width: 568px) and (orientation: landscape) and (max-width: 915px) {
-    top: 105%;
+    top: 115%;
   }
 
   .modal-container--is-hidden & {
@@ -502,10 +502,14 @@
   height: 30px;
 
   fill: var(--activity-text-color);
-  border: 1px solid rgba(33, 33, 33, 0.2);
+  border: 1px solid transparent;
   border-radius: 50%;
   background-color: var(--second-complementary-text-color);
   cursor: pointer;
+
+  &--border {
+    border: 1px solid rgba(33, 33, 33, 0.2);
+  }
 
   @include Animation(fill);
 
@@ -523,7 +527,11 @@
   border-radius: 4px;
 
   &:not(:last-child) {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+
+    @media screen and (min-width: 1280px) {
+      margin-bottom: 20px;
+    }
   }
 }
 
@@ -564,30 +572,6 @@
   border-radius: 4px;
 }
 
-// Second modal (modal-form-container)
-.modal-form {
-  background-color: var(--second-complementary-text-color);
-}
-// .circle-btn {
-//   position: absolute;
-//   top: 8px;
-//   right: 8px;
-
-//   width: 30px;
-//   height: 30px;
-
-//   border: 1px solid getColorDark('maxDark-opacity10');
-//   border-radius: 50%;
-//   background-color: transparent;
-//   cursor: pointer;
-
-//   @include Animation(fill);
-
-//   &:hover,
-//   &:focus {
-//     fill: getColorAccent('accent-primary');
-//   }
-// }
 .modal__title {
   margin-bottom: 12px;
 

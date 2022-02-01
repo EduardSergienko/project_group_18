@@ -326,7 +326,7 @@
   }
 
   @media screen and (min-width: 568px) and (orientation: landscape) and (max-width: 915px) {
-    top: 100%;
+    top: 115%;
   }
 
   @media screen and (min-width: 1200px) {
@@ -399,7 +399,7 @@
   width: 100%;
 
   color: black;
-  border: 1px solid black;
+  border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
 
   @include Animation(outline-color, border);
