@@ -5,3 +5,9 @@
 @mixin Animation($properties...) {
   transition: 250ms $timing-function;
 }
+
+@mixin circle($diametr) {
+  width: $diametr;
+  height: $diametr;
+  border-radius: ($diametr / 2);
+}
