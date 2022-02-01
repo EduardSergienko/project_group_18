@@ -136,6 +136,13 @@
   @media screen and (min-width: 1280px) {
     margin-top: 18px;
   }
+
+  @include Animation(transform);
+
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
+  }
 }
 
 .hero__number {
@@ -150,22 +157,50 @@
 
   color: #d41443;
 
-  &::after {
+  &--top::after {
     content: '';
 
     z-index: -1;
     position: absolute;
-    top: 0;
-    right: 0;
-    transform: translate(50%, 3px);
+    top: -3px;
+    right: -8px;
 
     display: block;
-    @include circle(16px);
 
     background-color: #ffffff;
 
+    @include circle(16px);
+    animation: animate_circle 2000ms;
+    animation-delay: 2500ms;
+
     @media screen and (min-width: 1280px) {
-      transform: translate(50%, -2px);
+      top: -2px;
+      right: -16px;
+
+      @include circle(32px);
+    }
+  }
+
+  &--bottom::after {
+    content: '';
+
+    z-index: -1;
+    position: absolute;
+    top: -3px;
+    right: -8px;
+
+    display: block;
+
+    background-color: #ffffff;
+
+    @include circle(16px);
+    animation: animate_circle 2000ms;
+    animation-delay: 3500ms;
+
+    @media screen and (min-width: 1280px) {
+      top: -2px;
+      right: -16px;
+
       @include circle(32px);
     }
   }
@@ -202,6 +237,12 @@
 
   @media screen and (min-width: 1280px) {
     @include box(112px, 200px, 180px);
+  }
+
+  @include Animation(transform);
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
   }
 }
 
