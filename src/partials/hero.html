@@ -40,15 +40,23 @@
       </p>
 
       <input type="checkbox" id="read-more" hidden />
+      
       <p class="extra-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
 
       <label for="read-more" class="read-more hero__read-more">
-        <span class="more btn-reset hero__arrow hero__arrow--more"
-          ><img src="./images/arrow.png" alt=""
-        /></span>
-        <span class="less btn-reset hero__arrow hero__arrow--less"
-          ><img src="./images/arrow.png" alt=""
-        /></span>
+
+        <span class="more btn-reset hero__arrow hero__arrow--more">
+          <svg class="icon-arrow ">
+            <use  href="./images/icons.svg#icon-arrow-right" ></use>
+          </svg>
+        </span>
+        
+        <span  class="less btn-reset hero__arrow hero__arrow--less">
+          <svg class="icon-arrow ">
+            <use  href="./images/icons.svg#icon-arrow-left"></use>
+          </svg>
+        </span>
+        
       </label>
     </div>
 

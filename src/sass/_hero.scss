@@ -247,8 +247,16 @@
 }
 
 .hero__arrow {
-  width: 18px;
-  height: 18px;
+  @include circle(18px);
+
+  background-color: var(--second-complementary-text-color);
+
+  @include Animation(background-color);
+
+  &:hover,
+  &:focus {
+    background-color: var(--activity-text-color);
+  }
 
   &--more {
     margin-top: 7px;
@@ -259,8 +267,7 @@
   }
 
   @media screen and (min-width: 1280px) {
-    width: 26px;
-    height: 26px;
+    @include circle(26px);
 
     &--more {
       margin-top: 20px;
@@ -269,6 +276,25 @@
     &--less {
       margin-top: 5px;
     }
+  }
+}
+
+.icon-arrow {
+  display: block;
+  width: 6px;
+  height: 6px;
+
+  fill: var(--activity-text-color);
+
+  @include Animation(fill);
+
+  .hero__arrow:hover &,
+  .hero__arrow:focus & {
+    fill: var(--second-complementary-text-color);
+  }
+
+  @media screen and (min-width: 1279px) {
+    width: 8px;
   }
 }
 
