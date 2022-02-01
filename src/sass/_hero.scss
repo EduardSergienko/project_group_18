@@ -129,8 +129,6 @@
 
   display: block;
 
-  @include Animation(transform);
-
   & + & {
     margin-top: 13px;
   }
@@ -139,9 +137,11 @@
     margin-top: 18px;
   }
 
+  @include Animation(transform);
+
   &:hover,
   &:focus {
-    transform: scale(1.15);
+    transform: scale(1.25);
   }
 }
 
@@ -237,6 +237,12 @@
 
   @media screen and (min-width: 1280px) {
     @include box(112px, 200px, 180px);
+  }
+
+  @include Animation(transform);
+  &:hover,
+  &:focus {
+    transform: scale(1.25);
   }
 }
 
