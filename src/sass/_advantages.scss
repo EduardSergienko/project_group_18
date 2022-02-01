@@ -86,6 +86,9 @@
   background-size: cover;
   margin-bottom: 16px;
   background-image: url(../images/mobile/icon_milk.png);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/icon_milk@2x.png);
+  }
 
   @media screen and (min-width: 768px) {
     margin-bottom: 36px;
@@ -103,6 +106,9 @@
   background-size: cover;
   margin-bottom: 16px;
   background-image: url(../images/mobile/icon_apples.png);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/icon_apples@2x.png);
+  }
 
   @media screen and (min-width: 768px) {
     margin-bottom: 36px;
@@ -120,6 +126,9 @@
   background-size: cover;
   margin-bottom: 16px;
   background-image: url(../images/mobile/icon_heart.png);
+  @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+    background-image: url(../images/mobile/icon_heart@2x.png);
+  }
 
   @media screen and (min-width: 768px) {
     margin-bottom: 36px;
