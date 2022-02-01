@@ -129,6 +129,8 @@ footer .container {
 
     background-color: #fea5bb;
 
+    cursor: pointer;
+
     @include Animation(background-color);
 
     @media screen and (min-width: 768px) {
@@ -169,6 +171,8 @@ footer .container {
 
   &__link {
     color: var(--activity-text-color);
+
+    cursor: pointer;
   }
 }
 
