@@ -1,6 +1,7 @@
 .read-more {
   border: none;
   padding: 0;
+  max-width: 0;
 }
 
 // p {
@@ -17,6 +18,7 @@
 
 .less {
   display: none;
+  transform: rotate(0);
 }
 
 #read-more:checked ~ .read-more .more {
@@ -25,4 +27,6 @@
 
 #read-more:checked ~ .read-more .less {
   display: block;
+  position: absolute;
+  transform: rotate(180deg);
 }

@@ -205,10 +205,6 @@
   }
 }
 
-.hero__read-more {
-  max-width: 0;
-}
-
 .hero__arrow {
   width: 18px;
   height: 18px;
@@ -218,13 +214,7 @@
   }
 
   &--less {
-    transform: rotate(0);
     margin-top: 3px;
-  }
-
-  #read-more:checked ~ .read-more &--less {
-    position: absolute;
-    transform: rotate(180deg);
   }
 
   @media screen and (min-width: 1280px) {
