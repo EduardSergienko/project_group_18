@@ -220,6 +220,11 @@
     margin-top: 3px;
   }
 
+  #read-more:checked ~ .read-more &--less {
+    position: absolute;
+    transform: rotate(180deg);
+  }
+
   @media screen and (min-width: 1280px) {
     width: 26px;
     height: 26px;
@@ -232,11 +237,6 @@
       margin-top: 5px;
     }
   }
-}
-
-#read-more:checked ~ .read-more .hero__arrow--less {
-  position: absolute;
-  transform: rotate(180deg);
 }
 
 .hero__img {
