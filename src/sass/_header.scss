@@ -16,6 +16,18 @@
   }
 }
 
+.header {
+  transition-duration: 0.5s;
+
+  transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+
+  transition-property: transform;
+}
+
+.header--hidden {
+  transform: translateY(-100%);
+}
+
 .header__container {
   display: flex;
 

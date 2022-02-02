@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" role="banner">
   
     <div class="header__container container">
       <a href="./index.html" class="logo">
@@ -202,4 +202,17 @@
       refs.modal.classList.toggle('modal-header-wrap--is-hidden');
     }
   })();
+</script>
+
+<script>
+  ( window.addEventListener('scroll', throttle(throttleTimeout, function () {
+      // ...
+      if (wScrollCurrent > elNarrowOffset) // перемикач
+      {
+        if (!hasElementClass(element, elClassNarrow))
+          addElementClass(element, elClassNarrow);
+      }
+      else removeElementClass(element, elClassNarrow);
+      // ...
+    })));
 </script>
