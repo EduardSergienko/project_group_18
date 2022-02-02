@@ -2,7 +2,13 @@
   
     <div class="header__container container">
       <a href="./index.html" class="logo">
-        <img class="logo__icon" src="./images/icon-logo.png" alt="Іtylized ice cream" width="50" />
+        <picture>
+          <source srcset="
+                    ./images/icon-logo.png 1x,
+                    ./images/icon-logo@2x.png 2x
+                    " type="image/png" />
+          <img class="logo__icon" src="./images/icon-logo.png" alt="logo Icecream" />
+        </picture>
         <p class="logo__text">icecream</p>
       </a>
     
