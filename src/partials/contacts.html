@@ -3,9 +3,7 @@
     <h2 class="section__title visually-hidden">Contacts</h2>
     <ul class="contacts">
       <li class="contacts-item">
-        <div class="contacts-label">
-          <p class="contacts-label__name">cafe</p>
-        </div>
+        <p class="contacts-label">cafe</p>
         <div class="contacts-subitem contacts-subitem--grow">
           <p class="contacts-name">Chicago</p>
           <p class="contacts-desc">2901 S King Dr, Chicago, IL, 60616</p>
@@ -20,17 +18,18 @@
             <p class="contacts-period__hours">08:00 AM - 16:00 PM</p>
           </li>
         </ul>
-        <div class="contacts-subitem contacts-subitem--before">
-          <a href="tel:+61(0)383766284" class="contacts-link">+61(0) 383 766 284</a>
-          <a href="mailto:noreply@envato.com" class="contacts-link">noreply@envato.com</a>
-        </div>
+        <ul class="contacts-subitem contacts-subitem--before">
+          <li>
+            <a href="tel:+61(0)383766284" class="contacts-link">+61(0) 383 766 284</a>
+          </li>
+          <li>
+            <a href="mailto:noreply@envato.com" class="contacts-link">noreply@envato.com</a>
+          </li>
+        </ul>
       </li>
       <li class="contacts-item">
-        <div class="contacts-label contacts-label--background">
-          <p class="contacts-label__name">foodtruck</p>
-        </div>
+        <p class="contacts-label contacts-label--background">foodtruck</p>
         <div class="contacts-subitem">
-        <div class="contacts-subitem ">
           <p class="contacts-name">Los Angeles</p>
           <p class="contacts-desc">600 Esplanade, Redondo Beach, CA 90277</p>
         </div>
@@ -44,15 +43,17 @@
             <p class="contacts-period__hours">08:00 AM - 16:00 PM</p>
           </li>
         </ul>
-        <div class="contacts-subitem contacts-subitem--before">
-          <a href="tel:+61(0)383766284" class="contacts-link">+61(0) 383 766 284</a>
-          <a href="mailto:noreply@envato.com" class="contacts-link">noreply@envato.com</a>
-        </div>
+        <ul class="contacts-subitem contacts-subitem--before">
+          <li>
+            <a href="tel:+61(0)383766284" class="contacts-link">+61(0) 383 766 284</a>
+          </li>
+          <li>
+            <a href="mailto:noreply@envato.com" class="contacts-link">noreply@envato.com</a>
+          </li>
+        </ul>
       </li>
       <li class="contacts-item">
-        <div class="contacts-label">
-          <p class="contacts-label__name">cafe</p>
-        </div>
+        <p class="contacts-label">cafe</p>
         <div class="contacts-subitem contacts-subitem--grow">
           <p class="contacts-name">New York</p>
           <p class="contacts-desc">611 W 163rd St, New York, NY, 10032</p>
@@ -67,30 +68,38 @@
             <p class="contacts-period__hours">08:00 AM - 16:00 PM</p>
           </li>
         </ul>
-        <div class="contacts-subitem contacts-subitem--before">
-          <a href="tel:+61(0)383766284" class="contacts-link">+61(0) 383 766 284</a>
-          <a href="mailto:noreply@envato.com" class="contacts-link">noreply@envato.com</a>
-        </div>
+        <ul class="contacts-subitem contacts-subitem--before">
+          <li>
+            <a href="tel:+61(0)383766284" class="contacts-link">+61(0) 383 766 284</a>
+          </li>
+          <li>
+            <a href="mailto:noreply@envato.com" class="contacts-link">noreply@envato.com</a>
+          </li>
+        </ul>
       </li>
     </ul>
-    <div class="button-block">
-      <button type="button" class="contacts-button" data-modal-open>
-        Our Locations
-        <svg class="button__icon" width="10" height="10">
-          <use href="./images/icons.svg#icon_button"></use>
-        </svg>
-      </button>
-      <button
-        type="button"
-        class="contacts-button contacts-button--background"
-        data-modal-form-open
-      >
-        Franchise
-        <svg class="button__icon button__icon--background" width="10" height="10">
-          <use href="./images/icons.svg#icon_button"></use>
-        </svg>
-      </button>
-    </div>
+    <ul class="button-block">
+      <li class="button-item">
+        <button type="button" class="contacts-button" data-modal-open>
+          Our Locations
+          <svg class="button__icon" width="10" height="10">
+            <use href="./images/icons.svg#icon_button"></use>
+          </svg>
+        </button>
+      </li>
+      <li class="button-item">
+        <button
+          type="button"
+          class="contacts-button contacts-button--background"
+          data-modal-form-open
+        >
+          Franchise
+          <svg class="button__icon button__icon--background" width="10" height="10">
+            <use href="./images/icons.svg#icon_button"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
   </div>
   <div class="modal-container modal-container--is-hidden" data-modal>
     <div class="modal">
@@ -146,7 +155,7 @@ I am interested in your franchise! Please, send me a business plan and detailed 
           >
         </label>
         <label class="form__group">
-          <p class="form-label">Name</p>
+          <span class="form-label">Name</span>
           <span class="form__icon-box">
             <input type="text" class="form__input form-control" name="name" required />
             <svg width="18" height="18" class="form__icon">
@@ -155,7 +164,7 @@ I am interested in your franchise! Please, send me a business plan and detailed 
           </span>
         </label>
         <label class="form__group">
-          <p class="form-label">Phone number</p>
+          <span class="form-label">Phone number</span>
           <span class="form__icon-box">
             <input type="text" class="form__input form-control" name="phone" required />
             <svg width="18" height="18" class="form__icon">
@@ -164,7 +173,7 @@ I am interested in your franchise! Please, send me a business plan and detailed 
           </span>
         </label>
         <label class="form__group">
-          <p class="form-label">E-mail</p>
+          <span class="form-label">E-mail</span>
           <span class="form__icon-box">
             <input type="text" class="form__input form-control" name="mail" required />
             <svg width="18" height="18" class="form__icon">
@@ -188,7 +197,7 @@ I am interested in your franchise! Please, send me a business plan and detailed 
 <!-- <script src="./js/modal.js"></script> -->
 
 <!-- script to modal Locations -->
-<script>
+<!-- <script>
   (() => {
     const refs = {
       openModalBtn: document.querySelector('[data-modal-open]'),
@@ -203,10 +212,10 @@ I am interested in your franchise! Please, send me a business plan and detailed 
       refs.modal.classList.toggle('modal-container--is-hidden');
     }
   })();
-</script>
+</script> -->
 
 <!-- script to modal Franchise -->
-<script>
+<!-- <script>
   (() => {
     const refs = {
       openModalBtn: document.querySelector('[data-modal-form-open]'),
@@ -221,4 +230,4 @@ I am interested in your franchise! Please, send me a business plan and detailed 
       refs.modal.classList.toggle('modal-container--is-hidden');
     }
   })();
-</script>
+</script> -->

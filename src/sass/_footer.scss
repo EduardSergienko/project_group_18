@@ -43,6 +43,7 @@ footer .container {
 .footer-title {
   width: 100%;
   max-width: 234px;
+  margin-bottom: 43px;
 
   font-family: Titan One;
   font-weight: 400;
@@ -53,6 +54,7 @@ footer .container {
   color: #ffa5ba;
 
   @media screen and (min-width: 768px) {
+    margin-bottom: 120px;
     max-width: 340px;
     font-size: 26px;
     line-height: 1.15;
@@ -60,6 +62,7 @@ footer .container {
   }
 
   @media screen and (min-width: 1280px) {
+    margin-bottom: 106px;
     max-width: 50%;
     font-size: 30px;
     line-height: 1.13;
@@ -70,7 +73,6 @@ footer .container {
 .footer-text {
   display: block;
   margin-top: 17px;
-  margin-bottom: 43px;
 
   font-family: Titan One;
   font-weight: 400;
@@ -86,7 +88,6 @@ footer .container {
     line-height: 1.14;
     letter-spacing: 0.06em;
     margin-top: 16px;
-    margin-bottom: 120px;
   }
 
   @media screen and (min-width: 1280px) {
@@ -94,7 +95,6 @@ footer .container {
     line-height: 1.13;
     letter-spacing: 0.06em;
     margin-top: 15px;
-    margin-bottom: 106px;
   }
 }
 
@@ -141,6 +141,7 @@ footer .container {
     &:hover,
     &:focus {
       background-color: var(--activity-text-color);
+      transform: scale(1.15);
     }
   }
 
@@ -171,35 +172,35 @@ footer .container {
 
   &__link {
     color: var(--activity-text-color);
-
     cursor: pointer;
+
+    &:hover,
+    &:focus {
+      transform: scale(1.11);
+    }
   }
 }
 
 .footer-copyright {
+  font-family: DM Sans;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 1.52;
+
+  color: var(--complementary-text-color);
+
   @media screen and (max-width: 767px) {
     max-width: 150px;
     margin-left: 59px;
   }
 
   @media screen and (min-width: 768px) {
+    line-height: 1.86;
+    letter-spacing: 0.02em;
+
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-  }
-
-  &__text {
-    font-family: DM Sans;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 14px;
-    line-height: 1.52;
-
-    color: var(--complementary-text-color);
-
-    @media screen and (min-width: 768px) {
-      line-height: 1.86;
-      letter-spacing: 0.02em;
-    }
   }
 }

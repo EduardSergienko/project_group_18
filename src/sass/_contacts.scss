@@ -20,8 +20,7 @@
       linear-gradient(to bottom, var(--second-complementary-text-color) 13%, #fff5f6 13%);
     background-position: center 23%;
     background-repeat: no-repeat;
-
-    // for responsive: background-size: contain;
+    background-size: contain;
   }
 
   @media not all,
@@ -82,56 +81,43 @@
 }
 
 .contacts-label {
-  position: relative;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
-  width: 80px;
-  min-height: 16px;
+  height: 16px;
   margin-bottom: 25px;
+  padding: 0 24px;
 
-  text-align: center;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 186%;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 
+  color: #ffffff;
   background-color: #f0d1a5;
   border-radius: 4px;
 
   @media screen and (min-width: 768px) {
+    padding: 0 36px;
     width: 73px;
-    min-height: 28px;
+    height: 28px;
+
+    font-size: 16px;
 
     border-radius: 6px;
   }
 
   &--background {
-    width: 130px;
+    padding: 0 27px;
 
     @media screen and (min-width: 768px) {
       width: 138px;
+      padding: 0 69px;
     }
 
     background-color: #c2e297;
-  }
-}
-
-.contacts-label__name {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-right: -50%;
-  transform: translate(-50%, -50%);
-
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 186%;
-  /* or 22px */
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.04em;
-
-  color: #ffffff;
-
-  @media screen and (min-width: 768px) {
-    font-size: 16px;
-    line-height: 186%;
-    /* or 30px */
   }
 }
 
@@ -165,7 +151,6 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 186%;
-  /* or 22px */
   letter-spacing: 0.04em;
 
   color: inherit;
@@ -175,7 +160,6 @@
 
     font-size: 14px;
     line-height: 186%;
-    /* or 26px */
   }
 
   @media screen and (min-width: 1280px) {
@@ -183,7 +167,6 @@
 
     font-size: 16px;
     line-height: 186%;
-    /* or 30px */
     letter-spacing: 0.04em;
   }
 }
@@ -192,20 +175,17 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  /* or 150% */
 
   color: var(--complementary-text-color);
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 166%;
-    /* or 23px */
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
     line-height: 183%;
-    /* or 29px */
     letter-spacing: 0.04em;
   }
 }
@@ -218,18 +198,15 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 186%;
-  /* or 22px */
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 186%;
-    /* or 26px */
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
     line-height: 186%;
-    /* or 30px */
     letter-spacing: 0.04em;
   }
 }
@@ -238,20 +215,17 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 186%;
-  /* or 22px */
 
   color: #ffa5ba;
 
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 186%;
-    /* or 26px */
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
     line-height: 186%;
-    /* or 30px */
   }
 }
 
@@ -261,7 +235,6 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 18px;
-  /* or 150% */
 
   color: var(--complementary-text-color);
 
@@ -270,13 +243,11 @@
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 183%;
-    /* or 26px */
   }
 
   @media screen and (min-width: 1280px) {
     font-size: 16px;
     line-height: 183%;
-    /* or 29px */
   }
 
   &:hover,
@@ -285,6 +256,7 @@
   }
 }
 
+// Button contacts
 .button-block {
   @media screen and (min-width: 768px) {
     display: flex;
@@ -297,12 +269,20 @@
   }
 }
 
+.button-item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    margin-bottom: 10px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-right: 15px;
+  }
+}
+
 .contacts-button {
   position: relative;
 
   display: block;
-  margin-left: auto;
-  margin-right: auto;
   padding: 12px 16px;
 
   // second option with width and height
@@ -321,25 +301,22 @@
 
   @include Animation(color);
 
+  @media screen and (max-width: 767px) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   @media screen and (min-width: 768px) {
-    padding: 12px 31px;
-    margin-left: 0;
-    margin-right: 0;
+    padding: 12px 28px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 12px 32px;
   }
 
   &:hover,
   &:focus {
     background-color: #c7133e;
-  }
-
-  &:not(:last-child) {
-    @media screen and (max-width: 767px) {
-      margin-bottom: 10px;
-    }
-
-    @media screen and (min-width: 768px) {
-      margin-right: 15px;
-    }
   }
 
   // second option with after without svg
@@ -357,7 +334,7 @@
   // }
 }
 .contacts-button--background {
-  padding: 12px 32px;
+  padding: 12px 29px;
 
   color: var(--activity-text-color);
   background-color: var(--second-complementary-text-color);
@@ -365,7 +342,11 @@
   @include Animation(color);
 
   @media screen and (min-width: 768px) {
-    padding: 12px 38px;
+    padding: 12px 36px;
+  }
+
+  @media screen and (min-width: 1280px) {
+    padding: 12px 39px;
   }
 
   &:hover,
@@ -446,6 +427,7 @@
   }
 }
 
+// Modal first (Our locations)
 .modal {
   position: relative;
   top: 25%;
@@ -543,7 +525,6 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 186%;
-  /* or 22px */
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.04em;
@@ -557,7 +538,6 @@
 
     font-size: 16px;
     line-height: 186%;
-    /* or 30px */
 
     border-radius: 6px;
   }
@@ -586,6 +566,7 @@
   }
 }
 
+// Modal second (Franchise)
 // Feedback form
 .form__comment,
 .form__group {
@@ -605,6 +586,7 @@
   padding: 12px 16px;
 
   font-size: 14px;
+  line-height: 1.2em;
 
   resize: none;
 
@@ -627,12 +609,13 @@
   @include Animation(outline-color, border);
 
   &:focus {
-    outline-color: var(--activity-text-color);
-    border: 1px solid var(--activity-text-color);
+    outline-color: #2e2e2e;
+    border: 1px solid #2e2e2e;
   }
 }
 
 .form-label {
+  display: inline-block;
   margin-bottom: 4px;
 }
 
@@ -670,7 +653,7 @@
   margin-bottom: 30px;
 
   font-size: 12px;
-  line-height: 1.17em;
+  line-height: 1.2em;
   letter-spacing: 0.03em;
 
   @media screen and (min-width: 1280px) {
